@@ -1,0 +1,40 @@
+#!/bin/bash
+set -euo pipefail
+
+repo="Gutman-Lab/bdsa-info"
+api="https://api.github.com/repos/${repo}/releases/tags/deploy-latest"
+state_dir="/var/lib/bdsa-info-sync"
+state_file="${state_dir}/last-asset"
+
+mkdir -p "${state_dir}"
+json="$(curl -fsS --retry 3 --retry-delay 2 \
+  -H 'Accept: application/vnd.github+json' \
+  -H 'User-Agent: bdsa-info-sync' \
+  "${api}")"
+asset="$(jq -ce '.assets[] | select(.name == "publish.tar.gz")' <<<"${json}")"
+asset_id="$(jq -r '.id' <<<"${asset}")"
+asset_updated="$(jq -r '.updated_at' <<<"${asset}")"
+asset_digest="$(jq -r '.digest // ""' <<<"${asset}")"
+asset_url="$(jq -r '.browser_download_url' <<<"${asset}")"
+marker="${asset_id} ${asset_updated} ${asset_digest}"
+
+if [ -f "${state_file}" ] && [ "$(cat "${state_file}")" = "${marker}" ]; then
+  exit 0
+fi
+
+tmp="$(mktemp)"
+trap 'rm -f "${tmp}"' EXIT
+curl -fsSL --retry 3 --retry-delay 2 -o "${tmp}" "${asset_url}"
+
+if [ -n "${asset_digest}" ]; then
+  printf '%s  %s\n' "${asset_digest#sha256:}" "${tmp}" | sha256sum -c --status - \
+    || { echo "bdsa-info-sync: digest mismatch for asset ${asset_id}" >&2; exit 1; }
+fi
+
+if ! tar -tzf "${tmp}" | grep -x './index.html' >/dev/null; then
+  echo "bdsa-info-sync: artifact ${asset_id} has no ./index.html" >&2
+  exit 1
+fi
+
+/usr/local/bin/bdsa-info-deploy < "${tmp}"
+printf '%s' "${marker}" > "${state_file}"

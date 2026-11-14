@@ -1,0 +1,12 @@
+[Unit]
+Description=Poll GitHub for a new info.bdsa.io deploy artifact
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=2min
+RandomizedDelaySec=15
+Persistent=true
+Unit=bdsa-info-sync.service
+
+[Install]
+WantedBy=timers.target

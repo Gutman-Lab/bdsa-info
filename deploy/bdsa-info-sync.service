@@ -1,0 +1,11 @@
+[Unit]
+Description=Pull and deploy the info.bdsa.io artifact
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=bdsa-info-deploy
+Group=bdsa-info
+TimeoutStartSec=300
+ExecStart=/usr/local/bin/bdsa-info-sync
