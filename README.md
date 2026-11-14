@@ -1,2 +1,62 @@
 # bdsa-info
-Source for the BDSA project site at https://info.bdsa.io: grant/project overview plus a mirror of the Digital Slide Archive documentation.
+
+Source for <https://info.bdsa.io>, the Brain Digital Slide Archive project site.
+
+The published document root has two parts:
+
+- `/` — the BDSA project site (this repository, MkDocs Material).
+- `/docs/` — a build of the [Digital Slide Archive documentation](https://github.com/Gutman-Lab/dsa-docs),
+  mirrored without forking its content.
+
+The documentation is still published from GitHub at
+<https://gutman-lab.github.io/dsa-docs/>. That remains the primary public copy;
+this site is the BDSA-owned mirror.
+
+## Build
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+scripts/build.sh
+```
+
+`scripts/build.sh` writes the complete document root to `publish/`:
+
+```text
+publish/
+  index.html          BDSA project home
+  project/            BDSA project overview
+  documentation/      how the mirror works
+  docs/               Digital Slide Archive documentation
+```
+
+It builds the project site with `mkdocs build --strict`, clones `dsa-docs` at
+its default branch, builds that site with `site_url` overridden to
+`https://info.bdsa.io/docs/`, and runs the `dsa-docs` link checker against the
+mirror.
+
+To preview the project site alone:
+
+```bash
+mkdocs serve
+```
+
+The documentation mirror is only present after `scripts/build.sh` runs; the
+deployed site serves it under `/docs/`.
+
+## Deployment contract
+
+The gateway serves `publish/` as the document root for `info.bdsa.io` and
+routes `/docs/` to the mirrored build. A deploy is a replacement of that static
+tree; there is no application server or database.
+
+`scripts/build.sh` is deterministic and network-dependent only for cloning
+`dsa-docs`. CI should run it on every push to `main` and on a schedule so the
+mirror tracks `dsa-docs`.
+
+## A note on content
+
+`docs/project.md` marks the grant, partner, and publication sections as
+awaiting the project team's reference material. Replace the draft notes with
+confirmed text before treating the project overview as final.

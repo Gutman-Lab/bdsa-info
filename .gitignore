@@ -1,0 +1,4 @@
+site/
+publish/
+.venv/
+__pycache__/
