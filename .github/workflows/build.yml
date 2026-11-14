@@ -31,3 +31,13 @@ jobs:
           name: info-bdsa-io
           path: publish
           retention-days: 14
+      - name: Deploy to info.bdsa.io
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        env:
+          SSH_KEY: ${{ secrets.INFO_DEPLOY_SSH_KEY }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/info_deploy
+          chmod 600 ~/.ssh/info_deploy
+          printf '170.140.138.248 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExoOVNganYHI5C5bG25LKf/U+br+nDahAEefEYTTQLB\n' > ~/.ssh/known_hosts
+          tar -C publish -czf - . | ssh -i ~/.ssh/info_deploy -o BatchMode=yes -o UserKnownHostsFile=~/.ssh/known_hosts bdsa-info-deploy@170.140.138.248
