@@ -31,8 +31,32 @@ jobs:
           name: info-bdsa-io
           path: publish
           retention-days: 14
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: info-bdsa-io
+          path: publish
+      - name: Package deploy artifact
+        if: vars.INFO_DEPLOY_TRANSPORT != 'ssh'
+        run: tar -C publish -czf publish.tar.gz .
+      - name: Publish deploy artifact
+        if: vars.INFO_DEPLOY_TRANSPORT != 'ssh'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view deploy-latest >/dev/null 2>&1 || \
+            gh release create deploy-latest --title "info.bdsa.io deploy artifact" --notes "Rolling artifact pulled by candyproxy." --prerelease
+          gh release upload deploy-latest publish.tar.gz --clobber
+          gh release edit deploy-latest --notes "Deploy artifact from ${GITHUB_SHA} (run ${GITHUB_RUN_ID})."
       - name: Deploy to info.bdsa.io
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: vars.INFO_DEPLOY_TRANSPORT == 'ssh'
         env:
           SSH_KEY: ${{ secrets.INFO_DEPLOY_SSH_KEY }}
         run: |
