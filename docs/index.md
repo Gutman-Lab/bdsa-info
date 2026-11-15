@@ -29,7 +29,8 @@ This site describes the project and hosts a mirror of the
 
 -   **Learning about the project?**
 
-    What BDSA is, who is involved, and how the project is funded.
+    What BDSA is, the two NIH awards behind it, the participating
+    institutions, and the acknowledgement wording for publications.
 
     [:material-arrow-right: Project overview](project.md)
 
@@ -65,7 +66,10 @@ from GitHub at
 [gutman-lab.github.io/dsa-docs](https://gutman-lab.github.io/dsa-docs/), where
 it is easier to discover and search.
 
-!!! note "About this site"
-    This site is being set up as the BDSA project home. The project and grant
-    overview is a draft until the project team supplies the final reference
-    text.
+!!! note "Funding"
+    BDSA is supported by the National Institutes of Health under awards
+    U24NS133949 (Emory University) and U24NS133945 (University of Kentucky),
+    both administered by the National Institute of Neurological Disorders and
+    Stroke. The [project overview](project.md) lists the participating
+    institutions, project outputs, and the acknowledgement wording to use in
+    publications.
