@@ -280,7 +280,7 @@
   margin-top: 1.5rem;
 }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 34em) {
   .bdsa-cards,
   .bdsa-features {
     grid-template-columns: repeat(2, minmax(0, 1fr));
