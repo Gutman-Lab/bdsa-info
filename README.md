@@ -57,6 +57,9 @@ mirror tracks `dsa-docs`.
 
 ## A note on content
 
-`docs/project.md` marks the grant, partner, and publication sections as
-awaiting the project team's reference material. Replace the draft notes with
-confirmed text before treating the project overview as final.
+`docs/project.md` carries the confirmed project content: award numbers, titles,
+project period, and investigators (taken from NIH RePORTER), the participating
+institutions and their site PIs, and the acknowledgement wording for
+publications. The public publications list is still being compiled and is
+flagged as such on the page. Confirm any grant language or acknowledgement text
+with the project team and the relevant grants office before changing it.
