@@ -1,0 +1,53 @@
+{% extends "main.html" %}
+
+{#
+  Landing page. The hero renders in the tabs block so it can sit full-bleed
+  directly under the header; the rest of the page is the normal Markdown body
+  of docs/index.md.
+#}
+
+{% block tabs %}
+  {{ super() }}
+  <section class="bdsa-hero" aria-labelledby="bdsa-hero-title">
+    <div class="bdsa-hero__inner">
+      <p class="bdsa-hero__eyebrow">NIH U24 &middot; NINDS &middot; 2023&ndash;2028</p>
+      <h1 class="bdsa-hero__title" id="bdsa-hero-title">Brain Digital Slide Archive</h1>
+      <p class="bdsa-hero__lead">
+        Shared digital pathology infrastructure for neuropathology &mdash; one
+        place to store, view, annotate, and analyze whole-slide images across
+        institutions.
+      </p>
+      <div class="bdsa-hero__actions">
+        <a class="bdsa-btn bdsa-btn--primary" href="docs/">
+          Read the documentation
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+        <a class="bdsa-btn bdsa-btn--ghost" href="project/">Project overview</a>
+        <a class="bdsa-btn bdsa-btn--ghost" href="https://pub-data.bdsa.io">Public data</a>
+      </div>
+
+      <dl class="bdsa-stats">
+        <div class="bdsa-stat">
+          <dt>NIH U24 awards</dt>
+          <dd>2</dd>
+        </div>
+        <div class="bdsa-stat">
+          <dt>Participating institutions</dt>
+          <dd>10</dd>
+        </div>
+        <div class="bdsa-stat">
+          <dt>Project period</dt>
+          <dd>2023&ndash;2028</dd>
+        </div>
+        <div class="bdsa-stat">
+          <dt>Platform</dt>
+          <dd>Open source</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+{% endblock %}
+
+{% block content %}
+  {{ page.content }}
+{% endblock %}

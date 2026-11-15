@@ -1,0 +1,476 @@
+/*
+ * Landing page for info.bdsa.io.
+ *
+ * Everything here is scoped to the home page (.bdsa-home / .bdsa-hero) so the
+ * project overview, the mirror explainer, and the /docs/ mirror are unchanged.
+ * Colours ride on Material's own CSS variables so light and dark modes both
+ * work without a second stylesheet.
+ */
+
+:root {
+  --bdsa-accent: #4f46e5;
+  --bdsa-accent-2: #0d9488;
+  --bdsa-accent-soft: rgba(79, 70, 229, 0.1);
+  --bdsa-surface: #ffffff;
+  --bdsa-surface-2: #f7f8fc;
+  --bdsa-border: rgba(15, 23, 42, 0.09);
+  --bdsa-muted: #4b5563;
+  --bdsa-radius: 18px;
+  --bdsa-shadow: 0 1px 2px rgba(15, 23, 42, 0.05),
+    0 18px 40px -24px rgba(15, 23, 42, 0.35);
+}
+
+[data-md-color-scheme="slate"] {
+  --bdsa-accent: #a5b4fc;
+  --bdsa-accent-2: #5eead4;
+  --bdsa-accent-soft: rgba(165, 180, 252, 0.14);
+  --bdsa-surface: rgba(255, 255, 255, 0.035);
+  --bdsa-surface-2: rgba(255, 255, 255, 0.02);
+  --bdsa-border: rgba(255, 255, 255, 0.11);
+  --bdsa-muted: #cbd5e1;
+  --bdsa-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
+    0 18px 40px -24px rgba(0, 0, 0, 0.7);
+}
+
+/* ------------------------------------------------------------------ hero */
+
+.bdsa-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #e9eefb;
+  background:
+    radial-gradient(60rem 30rem at 88% -20%, rgba(45, 212, 191, 0.28), transparent 62%),
+    radial-gradient(52rem 26rem at -10% 0%, rgba(99, 102, 241, 0.34), transparent 58%),
+    linear-gradient(145deg, #0a1020 0%, #131b32 52%, #0a2626 100%);
+}
+
+.bdsa-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(75% 80% at 50% 0%, #000 35%, transparent 100%);
+  mask-image: radial-gradient(75% 80% at 50% 0%, #000 35%, transparent 100%);
+  pointer-events: none;
+}
+
+.bdsa-hero__inner {
+  max-width: 61rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 5.5rem) 0.8rem 0;
+}
+
+.bdsa-hero__eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.72);
+}
+
+.bdsa-hero__title {
+  margin: 0;
+  font-size: clamp(2.35rem, 5.4vw, 3.9rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.bdsa-hero__lead {
+  max-width: 38rem;
+  margin: 1.15rem 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.65;
+  color: rgba(226, 232, 240, 0.86);
+}
+
+.bdsa-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.9rem;
+}
+
+.bdsa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.72rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 0.16s ease, background-color 0.16s ease,
+    border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.bdsa-btn svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bdsa-btn--primary {
+  background: #ffffff;
+  color: #0b1220;
+  box-shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.8);
+}
+
+.bdsa-btn--ghost {
+  color: #f1f5ff;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.bdsa-btn:hover,
+.bdsa-btn:focus-visible {
+  transform: translateY(-1px);
+}
+
+.bdsa-btn--primary:hover,
+.bdsa-btn--primary:focus-visible {
+  background: #e7ecff;
+}
+
+.bdsa-btn--ghost:hover,
+.bdsa-btn--ghost:focus-visible {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bdsa-btn:focus-visible {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------ hero stats */
+
+.bdsa-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1px;
+  margin: clamp(2.5rem, 5vw, 3.75rem) 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.bdsa-stat {
+  padding: 1.1rem 1rem 1.35rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.bdsa-stat:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.bdsa-stat dt {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.62);
+}
+
+.bdsa-stat dd {
+  margin: 0.25rem 0 0;
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+/* -------------------------------------------------------------- sections */
+
+.md-content__inner:has(.bdsa-home) {
+  padding-top: 0;
+}
+
+.bdsa-home {
+  padding: clamp(2.5rem, 5vw, 4rem) 0 1rem;
+}
+
+.bdsa-home h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.bdsa-home .headerlink {
+  display: none;
+}
+
+.bdsa-home .bdsa-kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bdsa-accent);
+}
+
+.bdsa-section {
+  padding-block: clamp(1.75rem, 3.5vw, 2.9rem);
+}
+
+.bdsa-section + .bdsa-section {
+  border-top: 1px solid var(--bdsa-border);
+}
+
+.bdsa-lead {
+  max-width: 46rem;
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--bdsa-muted);
+}
+
+.bdsa-lead + .bdsa-lead {
+  margin-top: 0.85rem;
+}
+
+/* ----------------------------------------------------------------- cards */
+
+.bdsa-cards,
+.bdsa-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.bdsa-features {
+  gap: 1.25rem 1.75rem;
+}
+
+.bdsa-card,
+.bdsa-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.bdsa-card {
+  padding: 1.35rem 1.35rem 1.45rem;
+  border: 1px solid var(--bdsa-border);
+  border-radius: var(--bdsa-radius);
+  background: var(--bdsa-surface);
+  box-shadow: var(--bdsa-shadow);
+  transition: transform 0.18s ease, border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.bdsa-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--bdsa-accent) 45%, var(--bdsa-border));
+}
+
+.bdsa-card__title {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--md-default-fg-color);
+}
+
+.bdsa-card > p,
+.bdsa-feature > p {
+  margin: 0;
+}
+
+.bdsa-card__text,
+.bdsa-feature__text {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--bdsa-muted);
+}
+
+.bdsa-card__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.bdsa-card__links p {
+  margin: 0;
+}
+
+.bdsa-card__links a {
+  text-decoration: none;
+}
+
+.bdsa-card__links a:hover {
+  text-decoration: underline;
+}
+
+.bdsa-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: 0.15rem;
+  border-radius: 12px;
+  background: var(--bdsa-accent-soft);
+  color: var(--bdsa-accent);
+}
+
+.bdsa-icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bdsa-feature__title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+.bdsa-feature__title + .bdsa-feature__text {
+  margin-top: -0.2rem;
+}
+
+.bdsa-feature .bdsa-icon {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 10px;
+}
+
+.bdsa-feature .bdsa-icon svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* -------------------------------------------------------------- docs CTA */
+
+.bdsa-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid var(--bdsa-border);
+  border-radius: var(--bdsa-radius);
+  background:
+    radial-gradient(30rem 14rem at 100% 0%, var(--bdsa-accent-soft), transparent 70%),
+    var(--bdsa-surface-2);
+}
+
+.bdsa-panel__body {
+  flex: 1 1 26rem;
+  min-width: 0;
+}
+
+.bdsa-panel__body p {
+  margin: 0.4rem 0 0;
+  color: var(--bdsa-muted);
+  line-height: 1.65;
+}
+
+.bdsa-panel .bdsa-btn--primary {
+  background: var(--bdsa-accent);
+  color: #ffffff;
+  box-shadow: 0 12px 28px -16px rgba(15, 23, 42, 0.9);
+}
+
+.bdsa-panel .bdsa-btn--primary:hover,
+.bdsa-panel .bdsa-btn--primary:focus-visible {
+  background: color-mix(in srgb, var(--bdsa-accent) 85%, #000);
+}
+
+.bdsa-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------- funding */
+
+.bdsa-funding {
+  margin-top: 0.5rem;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid var(--bdsa-border);
+  border-left: 3px solid var(--bdsa-accent-2);
+  border-radius: 12px;
+  background: var(--bdsa-surface-2);
+}
+
+.bdsa-funding p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: var(--bdsa-muted);
+}
+
+.bdsa-funding code {
+  font-size: 0.8rem;
+}
+
+.bdsa-funding a {
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------- responsive */
+
+@media screen and (max-width: 44.984375em) {
+  .bdsa-hero__inner {
+    padding-inline: 1rem;
+  }
+
+  .bdsa-stat {
+    padding: 0.9rem 0.75rem 1.1rem;
+  }
+
+  .bdsa-stat:nth-child(2n + 1) {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .bdsa-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bdsa-btn,
+  .bdsa-card {
+    transition: none;
+  }
+
+  .bdsa-card:hover,
+  .bdsa-btn:hover {
+    transform: none;
+  }
+}

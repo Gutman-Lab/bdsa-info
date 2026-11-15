@@ -1,75 +1,197 @@
-# Brain Digital Slide Archive
+---
+hide:
+  - navigation
+  - toc
+template: home.html
+---
 
-The **Brain Digital Slide Archive (BDSA)** is a shared neuropathology imaging
-project built on the open-source
-[Digital Slide Archive](https://digitalslidearchive.github.io/digital_slide_archive/).
-It gives collaborating brain banks, Alzheimer's Disease Research Centers, and
-research labs one place to store, view, annotate, and analyze whole-slide
-images without locking the data into a single institution.
+<div class="bdsa-home" markdown="1">
 
-This site describes the project and hosts a mirror of the
-[Digital Slide Archive documentation](https://info.bdsa.io/docs/).
+<section class="bdsa-section" markdown="1">
 
-## Start here
+<p class="bdsa-kicker">Overview</p>
 
-<div class="grid cards" markdown>
+<h2>What BDSA is</h2>
 
--   **Using the archive?**
+<p class="bdsa-lead" markdown="1">The **Brain Digital Slide Archive (BDSA)** is a shared neuropathology imaging project built on the open-source [Digital Slide Archive](https://digitalslidearchive.github.io/digital_slide_archive/). It gives collaborating brain banks, Alzheimer's Disease Research Centers, and research labs one place to store, view, annotate, and analyze whole-slide images without locking the data into a single institution.</p>
 
-    Connect to a BDSA node, find a slide, annotate it, and run an analysis.
-    The DSA documentation mirror covers the whole workflow.
+<p class="bdsa-lead" markdown="1">This site describes the project and hosts a mirror of the [Digital Slide Archive documentation](https://info.bdsa.io/docs/).</p>
 
-    [:material-arrow-right: Read the documentation](documentation.md)
+</section>
 
--   **Looking for data?**
+<section class="bdsa-section" markdown="1">
 
-    Browse the public neuropathology collections and their metadata.
+<p class="bdsa-kicker">Start here</p>
 
-    [:material-arrow-right: Public data](https://pub-data.bdsa.io)
+<h2>Pick your path</h2>
 
--   **Learning about the project?**
+<div class="bdsa-cards" markdown="1">
 
-    What BDSA is, the two NIH awards behind it, the participating
-    institutions, and the acknowledgement wording for publications.
+<div class="bdsa-card" markdown="1">
 
-    [:material-arrow-right: Project overview](project.md)
+<span class="bdsa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 4h6a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H2z"/><path d="M22 4h-6a3 3 0 0 0-3 3v13a2.5 2.5 0 0 1 2.5-2.5H22z"/></svg></span>
 
--   **Working on the software?**
+<p class="bdsa-card__title">Using the archive?</p>
 
-    The documentation source and component library live on GitHub.
+<p class="bdsa-card__text" markdown="1">Connect to a BDSA node, find a slide, annotate it, and run an analysis. The DSA documentation mirror covers the whole workflow.</p>
 
-    [:material-arrow-right: Gutman-Lab/dsa-docs](https://github.com/Gutman-Lab/dsa-docs)
+<div class="bdsa-card__links" markdown="1">
 
-    [:material-arrow-right: Gutman-Lab/bdsa-react-components](https://github.com/Gutman-Lab/bdsa-react-components)
+[:material-arrow-right: Read the documentation](documentation.md)
 
 </div>
 
-## What you can do with BDSA
+</div>
 
-- **Store** whole-slide images and derived files in a versioned, access-controlled
-  archive.
-- **View** slides in the browser with the HistomicsUI viewer, at full resolution
-  and across magnification levels.
-- **Annotate** regions and structures, alone or as a team, with an auditable
-  annotation record.
-- **Analyze** slides with containerized analysis tasks and keep results next to
-  the image they came from.
-- **Share** collections with collaborators or publish selected datasets for the
-  wider research community.
+<div class="bdsa-card" markdown="1">
 
-## Documentation
+<span class="bdsa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/><path d="M4 11.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span>
 
-The complete Digital Slide Archive documentation — getting started, tutorials,
-the user guide, administration, and API/component reference — is mirrored at
-[info.bdsa.io/docs/](https://info.bdsa.io/docs/). The same content is published
-from GitHub at
-[gutman-lab.github.io/dsa-docs](https://gutman-lab.github.io/dsa-docs/), where
-it is easier to discover and search.
+<p class="bdsa-card__title">Looking for data?</p>
 
-!!! note "Funding"
-    BDSA is supported by the National Institutes of Health under awards
-    U24NS133949 (Emory University) and U24NS133945 (University of Kentucky),
-    both administered by the National Institute of Neurological Disorders and
-    Stroke. The [project overview](project.md) lists the participating
-    institutions, project outputs, and the acknowledgement wording to use in
-    publications.
+<p class="bdsa-card__text" markdown="1">Browse the public neuropathology collections and their metadata.</p>
+
+<div class="bdsa-card__links" markdown="1">
+
+[:material-arrow-right: Public data](https://pub-data.bdsa.io)
+
+</div>
+
+</div>
+
+<div class="bdsa-card" markdown="1">
+
+<span class="bdsa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><path d="M12 7.8h.01"/></svg></span>
+
+<p class="bdsa-card__title">Learning about the project?</p>
+
+<p class="bdsa-card__text" markdown="1">What BDSA is, the two NIH awards behind it, the participating institutions, and the acknowledgement wording for publications.</p>
+
+<div class="bdsa-card__links" markdown="1">
+
+[:material-arrow-right: Project overview](project.md)
+
+</div>
+
+</div>
+
+<div class="bdsa-card" markdown="1">
+
+<span class="bdsa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 7.5-5 4.5 5 4.5"/><path d="m15 7.5 5 4.5-5 4.5"/></svg></span>
+
+<p class="bdsa-card__title">Working on the software?</p>
+
+<p class="bdsa-card__text" markdown="1">The documentation source and component library live on GitHub.</p>
+
+<div class="bdsa-card__links" markdown="1">
+
+[:material-arrow-right: Gutman-Lab/dsa-docs](https://github.com/Gutman-Lab/dsa-docs)
+
+[:material-arrow-right: Gutman-Lab/bdsa-react-components](https://github.com/Gutman-Lab/bdsa-react-components)
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bdsa-section" markdown="1">
+
+<p class="bdsa-kicker">Capabilities</p>
+
+<h2>What you can do with BDSA</h2>
+
+<div class="bdsa-features" markdown="1">
+
+<div class="bdsa-feature" markdown="1">
+
+<span class="bdsa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 7h17v3h-17z"/><path d="M5.5 10v9.5h13V10"/><path d="M10 14h4"/></svg></span>
+
+<p class="bdsa-feature__title">Store</p>
+
+<p class="bdsa-feature__text" markdown="1">Whole-slide images and derived files in a versioned, access-controlled archive.</p>
+
+</div>
+
+<div class="bdsa-feature" markdown="1">
+
+<span class="bdsa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2.5 12S6 6.2 12 6.2 21.5 12 21.5 12 18 17.8 12 17.8 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.6"/></svg></span>
+
+<p class="bdsa-feature__title">View</p>
+
+<p class="bdsa-feature__text" markdown="1">Slides in the browser with the HistomicsUI viewer, at full resolution and across magnification levels.</p>
+
+</div>
+
+<div class="bdsa-feature" markdown="1">
+
+<span class="bdsa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h4L20 8l-4-4L4 16z"/><path d="m14 6 4 4"/></svg></span>
+
+<p class="bdsa-feature__title">Annotate</p>
+
+<p class="bdsa-feature__text" markdown="1">Regions and structures, alone or as a team, with an auditable annotation record.</p>
+
+</div>
+
+<div class="bdsa-feature" markdown="1">
+
+<span class="bdsa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2.5 12h4l2.5-6 4 12 2.5-6h6"/></svg></span>
+
+<p class="bdsa-feature__title">Analyze</p>
+
+<p class="bdsa-feature__text" markdown="1">Slides with containerized analysis tasks and keep results next to the image they came from.</p>
+
+</div>
+
+<div class="bdsa-feature" markdown="1">
+
+<span class="bdsa-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.3 10.8 7.4-3.6"/><path d="m8.3 13.2 7.4 3.6"/></svg></span>
+
+<p class="bdsa-feature__title">Share</p>
+
+<p class="bdsa-feature__text" markdown="1">Collections with collaborators, or publish selected datasets for the wider research community.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bdsa-section" markdown="1">
+
+<div class="bdsa-panel" markdown="1">
+
+<div class="bdsa-panel__body" markdown="1">
+
+<p class="bdsa-kicker">Documentation</p>
+
+<h2>The complete DSA documentation</h2>
+
+<p markdown="1">Getting started, tutorials, the user guide, administration, and API/component reference — mirrored at [info.bdsa.io/docs/](https://info.bdsa.io/docs/) and published from GitHub at [gutman-lab.github.io/dsa-docs](https://gutman-lab.github.io/dsa-docs/), where it is easier to discover and search.</p>
+
+</div>
+
+<a class="bdsa-btn bdsa-btn--primary" href="docs/">Open the documentation
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+
+</div>
+
+</section>
+
+<section class="bdsa-section" markdown="1">
+
+<p class="bdsa-kicker">Funding</p>
+
+<h2>Supported by the NIH</h2>
+
+<div class="bdsa-funding" markdown="1">
+
+<p markdown="1">BDSA is supported by the National Institutes of Health under awards `U24NS133949` (Emory University) and `U24NS133945` (University of Kentucky), both administered by the National Institute of Neurological Disorders and Stroke. The [project overview](project.md) lists the participating institutions, project outputs, and the acknowledgement wording to use in publications.</p>
+
+</div>
+
+</section>
+
+</div>

@@ -12,6 +12,22 @@ The documentation is still published from GitHub at
 <https://gutman-lab.github.io/dsa-docs/>. That remains the primary public copy;
 this site is the BDSA-owned mirror.
 
+## Landing page
+
+`docs/index.md` is the BDSA home page. It is laid out for the landing page, not
+as a documentation article:
+
+- `overrides/home.html` adds the full-width hero above the page body and turns
+  off the sidebar for that one page (`template: home.html` in the front matter).
+- `docs/stylesheets/extra.css` holds every landing-page style, scoped to
+  `.bdsa-hero` and `.bdsa-home`, and follows Material's light/dark variables.
+- The Markdown body of `docs/index.md` is the content below the hero: overview,
+  the four "start here" cards, capabilities, the docs call to action, and the
+  funding note.
+
+Nothing here applies to `project.md`, `documentation.md`, or the `/docs/`
+mirror; those still render as ordinary documentation pages.
+
 ## Build
 
 ```bash
