@@ -6,6 +6,18 @@
   of docs/index.md.
 #}
 
+{% block extrahead %}
+  {{ super() }}
+  <style>
+    /* The landing page gets more room than a documentation article. */
+    @media screen and (min-width: 60em) {
+      .md-grid {
+        max-width: 76rem;
+      }
+    }
+  </style>
+{% endblock %}
+
 {% block tabs %}
   {{ super() }}
   <section class="bdsa-hero" aria-labelledby="bdsa-hero-title">
