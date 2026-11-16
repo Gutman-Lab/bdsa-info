@@ -464,9 +464,15 @@
 
 .bdsa-sitemap {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem 2rem;
   margin-top: 1.4rem;
+}
+
+@media screen and (min-width: 40em) {
+  .bdsa-sitemap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media screen and (min-width: 60em) {
