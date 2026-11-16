@@ -59,7 +59,7 @@ onboarding, metadata harmonization, and annual progress-report materials.
 <div class="bdsa-logo"><img src="../assets/logos/toronto.svg" alt="University of Toronto" loading="lazy"></div>
 <div class="bdsa-logo"><img src="../assets/logos/pittsburgh.svg" alt="University of Pittsburgh" loading="lazy"></div>
 <div class="bdsa-logo"><img src="../assets/logos/usp.svg" alt="Universidade de São Paulo" loading="lazy"></div>
-<div class="bdsa-logo"><img src="../assets/logos/mount-sinai.svg" alt="Icahn School of Medicine at Mount Sinai" loading="lazy"></div>
+<div class="bdsa-logo"><img src="../assets/logos/mount-sinai.png" alt="Icahn School of Medicine at Mount Sinai" loading="lazy"></div>
 <div class="bdsa-logo"><img src="../assets/logos/washington.svg" alt="University of Washington" loading="lazy"></div>
 
 </div>
