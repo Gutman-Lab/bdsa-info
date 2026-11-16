@@ -89,7 +89,7 @@
 }
 
 .bdsa-hero__lead {
-  max-width: 38rem;
+  max-width: none;
   margin: 0.8rem 0 0;
   font-size: clamp(0.98rem, 1.3vw, 1.1rem);
   line-height: 1.55;
@@ -259,7 +259,7 @@
 }
 
 .bdsa-lead {
-  max-width: 46rem;
+  max-width: none;
   margin: 0;
   font-size: 1.02rem;
   line-height: 1.65;
@@ -524,7 +524,7 @@
 /* --------------------------------------------------------------- funding */
 
 .bdsa-funding {
-  max-width: 58rem;
+  max-width: none;
   margin-top: 0.5rem;
   padding: 1.15rem 1.35rem;
   border: 1px solid var(--bdsa-border);
