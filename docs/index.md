@@ -21,6 +21,33 @@ template: home.html
 
 <section class="bdsa-section" markdown="1">
 
+<p class="bdsa-kicker">Participants</p>
+
+<h2>Ten institutions, one archive</h2>
+
+<p class="bdsa-lead" markdown="1">BDSA connects neuropathology groups at ten institutions across the United States, Canada, and Brazil. Each site contributes cases and expertise, and runs or connects to an archive node. The [project overview](project.md#participating-institutions) lists each site's PI and delegate.</p>
+
+<div class="bdsa-logos">
+
+<div class="bdsa-logo"><img src="assets/logos/emory.svg" alt="Emory University" loading="lazy"></div>
+<div class="bdsa-logo"><img src="assets/logos/uc-davis.svg" alt="University of California, Davis" loading="lazy"></div>
+<div class="bdsa-logo"><img src="assets/logos/northwestern.svg" alt="Northwestern University" loading="lazy"></div>
+<div class="bdsa-logo"><img src="assets/logos/kentucky.svg" alt="University of Kentucky" loading="lazy"></div>
+<div class="bdsa-logo"><img src="assets/logos/ut-health-san-antonio.svg" alt="UT Health San Antonio" loading="lazy"></div>
+<div class="bdsa-logo"><img src="assets/logos/toronto.svg" alt="University of Toronto" loading="lazy"></div>
+<div class="bdsa-logo"><img src="assets/logos/pittsburgh.svg" alt="University of Pittsburgh" loading="lazy"></div>
+<div class="bdsa-logo"><img src="assets/logos/usp.svg" alt="Universidade de São Paulo" loading="lazy"></div>
+<div class="bdsa-logo"><img src="assets/logos/mount-sinai.svg" alt="Icahn School of Medicine at Mount Sinai" loading="lazy"></div>
+<div class="bdsa-logo"><img src="assets/logos/washington.svg" alt="University of Washington" loading="lazy"></div>
+
+</div>
+
+<p class="bdsa-logos__note">Institution names and logos are trademarks of their respective institutions, used here to identify participating sites.</p>
+
+</section>
+
+<section class="bdsa-section" markdown="1">
+
 <p class="bdsa-kicker">Start here</p>
 
 <h2>Pick your path</h2>
