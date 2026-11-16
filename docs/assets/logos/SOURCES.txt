@@ -1,0 +1,61 @@
+Institution logos used on info.bdsa.io.
+
+These files identify the institutions participating in the Brain Digital Slide
+Archive. Institution names and logos are trademarks of their respective
+institutions; they are used here only to identify participating sites, not to
+imply endorsement.
+
+All files are SVG and were retrieved on 2026-11-16 from Wikimedia Commons or
+the English Wikipedia. Where a file is hosted on Wikipedia as non-free, the
+project uses it solely for identification of the institution in a factual list
+of consortium members.
+
+emory.svg
+  Emory University
+  https://en.wikipedia.org/wiki/File:Emory_U_Logo.svg
+  Fair use (Wikipedia, non-free)
+
+uc-davis.svg
+  University of California, Davis (wordmark)
+  https://commons.wikimedia.org/wiki/File:UC_Davis_wordmark.svg
+  Public domain
+
+northwestern.svg
+  Northwestern University (wordmark)
+  https://commons.wikimedia.org/wiki/File:Northwestern_University_wordmark.svg
+  Public domain
+
+kentucky.svg
+  University of Kentucky
+  https://commons.wikimedia.org/wiki/File:University_of_Kentucky_logo.svg
+  Public domain
+
+ut-health-san-antonio.svg
+  UT Health San Antonio
+  https://commons.wikimedia.org/wiki/File:UT_Health_San_Antonio_Logo.svg
+  Public domain
+
+toronto.svg
+  University of Toronto
+  https://en.wikipedia.org/wiki/File:UofT_logo.svg
+  Fair use (Wikipedia, non-free)
+
+pittsburgh.svg
+  University of Pittsburgh
+  https://en.wikipedia.org/wiki/File:University_of_Pittsburgh_logo.svg
+  Fair use (Wikipedia, non-free)
+
+usp.svg
+  Universidade de São Paulo (wordmark)
+  https://commons.wikimedia.org/wiki/File:Webysther_20160310_-_Logo_USP.svg
+  Public domain
+
+mount-sinai.svg
+  Icahn School of Medicine at Mount Sinai
+  https://commons.wikimedia.org/wiki/File:Icahn_School_of_Medicine_at_Mount_Sinai_logo.svg
+  Public domain
+
+washington.svg
+  University of Washington (signature)
+  https://commons.wikimedia.org/wiki/File:University_of_Washington_signature.svg
+  Public domain
