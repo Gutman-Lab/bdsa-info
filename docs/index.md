@@ -182,6 +182,79 @@ template: home.html
 
 <section class="bdsa-section" markdown="1">
 
+<p class="bdsa-kicker">All sections</p>
+
+<h2>Explore the project</h2>
+
+<p class="bdsa-lead" markdown="1">Every public entry point is listed here, including pages that are not featured above. The project's working notes are still being consolidated, so a few pages remain in draft; everything that has been published so far is linked here and searchable in the [documentation](https://info.bdsa.io/docs/).</p>
+
+<p class="bdsa-lead" markdown="1">Onboarding, data-use agreements, node hardware planning, and the working project notes are handled by the team directly. Use [contact and collaboration](project.md#contact-and-collaboration) to request access.</p>
+
+<div class="bdsa-sitemap" markdown="1">
+
+<div class="bdsa-sitemap__group" markdown="1">
+
+<p class="bdsa-sitemap__title">Using the archive</p>
+
+- [Get started: what DSA is](https://info.bdsa.io/docs/get-started/what-is-dsa/)
+- [Try the public demo](https://info.bdsa.io/docs/get-started/try-the-demo/)
+- [Install a DSA node](https://info.bdsa.io/docs/get-started/install/)
+- [Upload and view a slide](https://info.bdsa.io/docs/get-started/first-slide/)
+- [Tutorials](https://info.bdsa.io/docs/tutorials/)
+- [User guide](https://info.bdsa.io/docs/user-guide/)
+- [FAQ and troubleshooting](https://info.bdsa.io/docs/troubleshooting/)
+
+</div>
+
+<div class="bdsa-sitemap__group" markdown="1">
+
+<p class="bdsa-sitemap__title">Running and extending</p>
+
+- [System overview](https://info.bdsa.io/docs/system-overview/)
+- [Administration](https://info.bdsa.io/docs/admin/)
+- [Assetstores and storage](https://info.bdsa.io/docs/admin/assetstores-and-storage/)
+- [REST API](https://info.bdsa.io/docs/reference/rest-api/)
+- [Python client](https://info.bdsa.io/docs/reference/python-client/)
+- [UI components](https://info.bdsa.io/docs/reference/bdsa-react-components/)
+- [Release notes](https://info.bdsa.io/docs/release-notes/)
+
+</div>
+
+<div class="bdsa-sitemap__group" markdown="1">
+
+<p class="bdsa-sitemap__title">Project and people</p>
+
+- [Project overview](project.md)
+- [Participating institutions](project.md#participating-institutions)
+- [Publications and project outputs](project.md#publications-and-project-outputs)
+- [Acknowledgement wording](project.md#acknowledgement-wording)
+- [Contact and collaboration](project.md#contact-and-collaboration)
+- [About the DSA project](https://info.bdsa.io/docs/about/)
+- [Success stories](https://info.bdsa.io/docs/success-stories/)
+- [Papers and publications](https://info.bdsa.io/docs/papers-publications/)
+
+</div>
+
+<div class="bdsa-sitemap__group" markdown="1">
+
+<p class="bdsa-sitemap__title">Data and contributing</p>
+
+- [Public data](https://pub-data.bdsa.io)
+- [Documentation mirror](documentation.md)
+- [Contributing](https://info.bdsa.io/docs/contributing/)
+- [Migration guide](https://info.bdsa.io/docs/migration/)
+- [bdsa-react-components](https://github.com/Gutman-Lab/bdsa-react-components)
+- [Documentation source](https://github.com/Gutman-Lab/dsa-docs)
+- [Report a documentation issue](https://github.com/Gutman-Lab/dsa-docs/issues)
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bdsa-section" markdown="1">
+
 <p class="bdsa-kicker">Funding</p>
 
 <h2>Supported by the NIH</h2>
