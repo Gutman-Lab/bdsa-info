@@ -606,9 +606,14 @@
 }
 
 @media screen and (min-width: 60em) {
-  .bdsa-logos {
+  .bdsa-logos:not(.bdsa-logos--compact) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
+}
+
+/* Ten logos in three columns leaves one tile alone on the last row. */
+.bdsa-logos--compact > :last-child:nth-child(3n + 1) {
+  grid-column: 2;
 }
 
 /* ------------------------------------------------------------- responsive */

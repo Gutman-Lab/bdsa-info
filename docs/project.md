@@ -49,7 +49,7 @@ the NIH RePORTER record for each award.
 Each participating institution has a site PI and a BDSA delegate who coordinates
 onboarding, metadata harmonization, and annual progress-report materials.
 
-<div class="bdsa-logos">
+<div class="bdsa-logos bdsa-logos--compact">
 
 <div class="bdsa-logo"><img src="../assets/logos/emory.svg" alt="Emory University" loading="lazy"></div>
 <div class="bdsa-logo"><img src="../assets/logos/uc-davis.svg" alt="University of California, Davis" loading="lazy"></div>
