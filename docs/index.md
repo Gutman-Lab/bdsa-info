@@ -33,10 +33,8 @@ template: home.html
 <div class="bdsa-logo"><img src="assets/logos/uc-davis.svg" alt="University of California, Davis" loading="lazy"></div>
 <div class="bdsa-logo"><img src="assets/logos/northwestern.svg" alt="Northwestern University" loading="lazy"></div>
 <div class="bdsa-logo"><img src="assets/logos/kentucky.svg" alt="University of Kentucky" loading="lazy"></div>
-<div class="bdsa-logo"><img src="assets/logos/ut-health-san-antonio.svg" alt="UT Health San Antonio" loading="lazy"></div>
 <div class="bdsa-logo"><img src="assets/logos/toronto.svg" alt="University of Toronto" loading="lazy"></div>
 <div class="bdsa-logo"><img src="assets/logos/pittsburgh.svg" alt="University of Pittsburgh" loading="lazy"></div>
-<div class="bdsa-logo"><img src="assets/logos/usp.svg" alt="Universidade de São Paulo" loading="lazy"></div>
 <div class="bdsa-logo"><img src="assets/logos/mount-sinai.png" alt="Icahn School of Medicine at Mount Sinai" loading="lazy"></div>
 <div class="bdsa-logo"><img src="assets/logos/washington.svg" alt="University of Washington" loading="lazy"></div>
 
