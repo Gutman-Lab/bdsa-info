@@ -9,10 +9,22 @@
 {% block extrahead %}
   {{ super() }}
   <style>
-    /* The landing page gets more room than a documentation article. */
+    /* Material steps the root font size up to 150% on very wide screens. That
+       is fine for a documentation article, but on the landing page it inflates
+       the type, line height, and section padding until the page feels loose.
+       Keep the 125% baseline here. */
+    @media screen and (min-width: 100em) {
+      html {
+        font-size: 125%;
+      }
+    }
+
+    /* The landing page gets more room than a documentation article. The previous
+       76rem cap left most of a wide monitor empty and made the prose look as if
+       it was cut off mid-screen. */
     @media screen and (min-width: 60em) {
       .md-grid {
-        max-width: 76rem;
+        max-width: min(100% - 3rem, 128rem);
       }
     }
   </style>
