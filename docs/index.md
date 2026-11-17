@@ -23,9 +23,9 @@ template: home.html
 
 <p class="bdsa-kicker">Participants</p>
 
-<h2>Ten institutions, one archive</h2>
+<h2>Eight institutions, one archive</h2>
 
-<p class="bdsa-lead" markdown="1">BDSA connects neuropathology groups at ten institutions across the United States, Canada, and Brazil. Each site contributes cases and expertise, and runs or connects to an archive node. The [project overview](project.md#participating-institutions) lists each site's PI and delegate.</p>
+<p class="bdsa-lead" markdown="1">BDSA connects neuropathology groups at eight institutions across the United States and Canada. Each site contributes cases and expertise, and runs or connects to an archive node. The [project overview](project.md#participating-institutions) lists each site's PI and delegate.</p>
 
 <div class="bdsa-logos">
 

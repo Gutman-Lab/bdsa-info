@@ -10,7 +10,7 @@ open-source [Digital Slide Archive](https://digitalslidearchive.github.io/digita
 | **Awards** | U24 NS133949 and U24 NS133945 |
 | **Funder** | National Institutes of Health; both awards are administered by the National Institute of Neurological Disorders and Stroke (NINDS) |
 | **Project period** | September 2023 – August 2028 |
-| **Lead institutions** | Emory University and the University of Kentucky, with ten participating sites |
+| **Lead institutions** | Emory University and the University of Kentucky, with eight participating sites |
 | **Platform** | [Digital Slide Archive](https://digitalslidearchive.github.io/digital_slide_archive/), open source |
 
 ## What BDSA is
@@ -70,10 +70,8 @@ onboarding, metadata harmonization, and annual progress-report materials.
 | University of California, Davis | Brittany Dugger |
 | Northwestern University | Lee Alex Donald Cooper |
 | University of Kentucky | Peter Nelson |
-| The University of Texas Health Science Center at San Antonio | Margaret Flanagan |
 | University of Toronto | Gabor Kovacs |
 | University of Pittsburgh | Thomas Pearce |
-| University of Sao Paulo Medical School | Claudia Suemoto |
 | Icahn School of Medicine at Mount Sinai | John Crary |
 | University of Washington | Amber Nolan |
 
