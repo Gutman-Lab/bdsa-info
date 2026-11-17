@@ -617,12 +617,12 @@
 
 @media screen and (min-width: 60em) {
   .bdsa-logos:not(.bdsa-logos--compact) {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* Ten logos in three columns leaves one tile alone on the last row. */
-.bdsa-logos--compact > :last-child:nth-child(3n + 1) {
+/* Eight logos in three columns leaves two tiles on the last row. */
+.bdsa-logos--compact > :nth-last-child(2):nth-child(3n + 1) {
   grid-column: 2;
 }
 

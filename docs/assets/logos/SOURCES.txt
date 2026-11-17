@@ -30,11 +30,6 @@ kentucky.svg
   https://commons.wikimedia.org/wiki/File:University_of_Kentucky_logo.svg
   Public domain
 
-ut-health-san-antonio.svg
-  UT Health San Antonio
-  https://commons.wikimedia.org/wiki/File:UT_Health_San_Antonio_Logo.svg
-  Public domain
-
 toronto.svg
   University of Toronto
   https://en.wikipedia.org/wiki/File:UofT_logo.svg
@@ -44,11 +39,6 @@ pittsburgh.svg
   University of Pittsburgh
   https://en.wikipedia.org/wiki/File:University_of_Pittsburgh_logo.svg
   Fair use (Wikipedia, non-free)
-
-usp.svg
-  Universidade de São Paulo (wordmark)
-  https://commons.wikimedia.org/wiki/File:Webysther_20160310_-_Logo_USP.svg
-  Public domain
 
 mount-sinai.png
   Icahn School of Medicine at Mount Sinai (horizontal lockup, 380x67)
